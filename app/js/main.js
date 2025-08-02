@@ -40,6 +40,16 @@ document.getElementById('btnUndo')
 document.getElementById('btnRedo')
 	.addEventListener('click', (e) => { map.redo() })
 
+document.addEventListener('keydown', (e) => {
+  if (e.ctrlKey && e.key === 'z')
+	  map.undo()
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.ctrlKey && e.key === 'y')
+	  map.redo()
+});
+
 document.getElementById('btnClear')
 	.addEventListener('click', (e) => {	map.clearMap() })
 
