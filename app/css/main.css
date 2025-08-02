@@ -1,0 +1,47 @@
+.vertical-alignemnt {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.map-toolbox-container {
+	flex-grow: 1;
+	display: flex;
+	border: 1px solid black;
+	overflow: hidden;
+}
+
+.toolbox {
+	background-color: lightgray;
+	border-right: 1px solid black;
+	flex: 1 1 15%;
+}
+
+.map-container {
+	flex: 1 1 85%;
+	background-color: gray;
+	overflow: hidden;
+	position: relative;
+}
+
+.map-layer {
+	background-color: white;
+	position: absolute;
+	top: 0;
+	left: 0;
+	image-rendering: pixelated;
+}
+
+#background-layer {
+	background-color: white;
+}
+
+fieldset > * {
+	display: inline-block;
+	margin: 5px;
+}
+
+fieldset > button {
+	display: block;
+	width: 100%;
+}

@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<title>Draw</title>
+</head>
+<body>
+	<div class="vertical-alignemnt">
+		<h1>Draw &#8482;</h1>
+		<div class="map-toolbox-container">
+			<div class="toolbox vertical-alignemnt">
+				<fieldset>
+					<legend>Drawing:</legend>
+					<div>
+						Line width :
+						<select id="optWidth">
+							<option value="5">5</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="13" selected="selected">13</option>
+							<option value="15">15</option>
+						</select>
+					</div>
+					<div>
+						Color :
+						<select id="optColor">
+							<option value="rgb(70, 70, 70)" selected="selected">dark gray</option>
+							<option value="blue">blue</option>
+							<option value="red">red</option>
+							<option value="green">green</option>
+							<option value="yellow">yellow</option>
+							<option value="gray">gray</option>
+						</select>
+					</div>
+					<button id="btnClear">Clear</button>
+					<button id="btnUndo">Undo ↶</button>
+					<button id="btnRedo">Redo ↷</button>
+				</fieldset>
+				<fieldset>
+					<legend>Grid:</legend>
+					<label>Grid type: </label>
+					<br />
+					<input type="radio" id="rect" name="grid_type" value="rect" checked>
+					<label for="rect">Rectangular</label>
+					<br />
+					<input type="radio" id="hex" name="grid_type" value="grid">
+					<label for="hex">Hexagonal</label>
+					<br />
+					<div>
+						Grid cell size:
+						<input id="gridCellSize" type="number" min="0" value="60">
+					</div>
+					<button id="btnAddGrid">Add grid</button>
+					<button id="btnRemoveGrid">Remove grid</button>
+				</fieldset>
+			</div>
+			<div class="map-container">
+				<canvas class="map-layer" id="design-layer"></canvas>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="js/main.js" type="module"></script>
+</html>
